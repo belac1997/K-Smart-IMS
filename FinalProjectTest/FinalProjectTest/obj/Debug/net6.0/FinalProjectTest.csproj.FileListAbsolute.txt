@@ -23,4 +23,4 @@ C:\Users\Cody\Documents\GitHub\K-Smart-IMS\FinalProjectTest\FinalProjectTest\obj
 C:\Users\Cody\Documents\GitHub\K-Smart-IMS\FinalProjectTest\FinalProjectTest\obj\Debug\net6.0\ref\FinalProjectTest.dll
 C:\Users\Cody\Documents\GitHub\K-Smart-IMS\FinalProjectTest\FinalProjectTest\obj\Debug\net6.0\FinalProjectTest.pdb
 C:\Users\Cody\Documents\GitHub\K-Smart-IMS\FinalProjectTest\FinalProjectTest\obj\Debug\net6.0\FinalProjectTest.genruntimeconfig.cache
-C:\Users\Cody\Documents\GitHub\K-Smart-IMS\FinalProjectTest\FinalProjectTest\obj\Debug\net6.0\refint\FinalProjectTest.dll
+C:\Users\Cody\Documents\GitHub\K-Smart-IMS\FinalProjectTest\FinalProjectTest\bin\Debug\net6.0\ref\FinalProjectTest.dll
