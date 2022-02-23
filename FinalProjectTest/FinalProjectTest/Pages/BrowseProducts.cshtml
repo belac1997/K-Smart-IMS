@@ -1,0 +1,83 @@
+﻿@page
+@model FinalProjectTest.Pages.BrowseProductsModel
+@{
+}
+
+<h2>Browse Products</h2>
+
+<div style="float: left;">
+<h3 style="font-size:12px;">Select Category: </h3>
+<select name="categories" id="categories">
+  <option value="All">All</option>
+  <option value="appliances">Appliances</option>
+  <option value="office">Office Supplies</option>
+  <option value="bathroom">Bathroom</option>
+  <option value="tools">Tools</option>
+</select>
+</div>
+
+<div>
+<h3 style="font-size:12px;">Sort By: </h3>
+<select name="categories" id="categories">
+  <option value="name">Name</option>
+  <option value="category">Category</option>
+  <option value="msrp">MSRP</option>
+  <option value="manufacturer">Manufacturer</option>
+</select>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>MSRP</th>
+            <th>Manufacturer</th>
+            <th>Info</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>Turbowash Ultra Pantsoaker 3000</td>
+                <td>Appliances</td>
+                <td>$749.99</td>
+                <td>Whirlpool</td>
+                <td><button type="submit" class="btn btn-primary">View</button></td>
+            </tr>
+            <tr>
+                <td>0 Degree Kelvin Instant Minifridge</td>
+                <td>Appliances</td>
+                <td>$1,299.99</td>
+                <td>Samsung</td>
+                <td><button type="submit" class="btn btn-primary">View</button></td>
+            </tr>
+            <tr>
+                <td>Clippy's Mega Funtime Paperclip Dispenser</td>
+                <td>Office Supplies</td>
+                <td>$49.99</td>
+                <td>Microsoft ft. Supreme</td>
+                <td><button type="submit" class="btn btn-primary">View</button></td>
+            </tr>
+            <tr>
+                <td>The Alcoholic Programmer's Desktop Decanter</td>
+                <td>Office Supplies</td>
+                <td>$64.99</td>
+                <td>Hígado Graso INC.</td>
+                <td><button type="submit" class="btn btn-primary">View</button></td>
+            </tr>
+            <tr>
+                <td>A Pencil</td>
+                <td>Office Supplies</td>
+                <td>$0.99</td>
+                <td>Ticonderoga</td>
+                <td><button type="submit" class="btn btn-primary">View</button></td>
+            </tr>
+            <tr>
+                <td>Lifetime Supply of Toilet Paper, 2-Ply</td>
+                <td>Bathroom</td>
+                <td>$5249.99</td>
+                <td>Dunder Mifflin Paper Co.</td>
+                <td><button type="submit" class="btn btn-primary">View</button></td>
+            </tr>
+    </tbody>
+</table>

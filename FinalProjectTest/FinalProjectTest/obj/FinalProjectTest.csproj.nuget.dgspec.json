@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bjs59\\Documents\\GitHub\\FinalProjectTest\\FinalProjectTest\\FinalProjectTest.csproj": {}
+    "C:\\Users\\kingd\\Desktop\\repo\\KSmart-IMS\\FinalProjectTest\\FinalProjectTest\\FinalProjectTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bjs59\\Documents\\GitHub\\FinalProjectTest\\FinalProjectTest\\FinalProjectTest.csproj": {
+    "C:\\Users\\kingd\\Desktop\\repo\\KSmart-IMS\\FinalProjectTest\\FinalProjectTest\\FinalProjectTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bjs59\\Documents\\GitHub\\FinalProjectTest\\FinalProjectTest\\FinalProjectTest.csproj",
+        "projectUniqueName": "C:\\Users\\kingd\\Desktop\\repo\\KSmart-IMS\\FinalProjectTest\\FinalProjectTest\\FinalProjectTest.csproj",
         "projectName": "FinalProjectTest",
-        "projectPath": "C:\\Users\\bjs59\\Documents\\GitHub\\FinalProjectTest\\FinalProjectTest\\FinalProjectTest.csproj",
-        "packagesPath": "C:\\Users\\bjs59\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bjs59\\Documents\\GitHub\\FinalProjectTest\\FinalProjectTest\\obj\\",
+        "projectPath": "C:\\Users\\kingd\\Desktop\\repo\\KSmart-IMS\\FinalProjectTest\\FinalProjectTest\\FinalProjectTest.csproj",
+        "packagesPath": "C:\\Users\\kingd\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kingd\\Desktop\\repo\\KSmart-IMS\\FinalProjectTest\\FinalProjectTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\bjs59\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kingd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
