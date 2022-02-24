@@ -1,0 +1,56 @@
+﻿@page
+@model CurrentInventoryModel
+@{
+    ViewData["Title"] = "Current Inventory";
+}
+
+<div class="text-left">
+    <h1 class="display-3">Inventory</h1>
+
+<form asp-controller="Inventory" asp-action="Index">
+    <p>
+        <input type="text" name="SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+    <table class="table table-bordered table-striped">
+        <thread>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thread>
+        <tbody>
+            <tr>
+                <td>Tables</td>
+                <td>97</td>
+                <td><a class="nav-link text-dark" asp-area="" asp-page="/InventoryEdit">Edit</a></td>
+
+            </tr>
+            <tr>
+                <td>Plates</td>
+                <td>120</td>
+                <td><a class="nav-link text-dark" asp-area="" asp-page="/InventoryEdit">Edit</a></td>
+
+            </tr>
+            <tr>
+                <td>Chairs</td>
+                <td>203</td>
+                <td><a class="nav-link text-dark" asp-area="" asp-page="/InventoryEdit">Edit</a></td>
+
+            </tr>
+            <tr>
+                <td>Cups</td>
+                <td>156</td>
+                <td><a class="nav-link text-dark" asp-area="" asp-page="/InventoryEdit">Edit</a></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
