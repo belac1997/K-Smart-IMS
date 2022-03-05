@@ -5,11 +5,11 @@
 }
 
 <div class="text-left">
-    <h1 class="display-3">Current Inventory | Tables</h1>
+    <h2>Tables | Current Inventory</h2>
 
 
 
-    <table class="table table-bordered table-striped">
+    <table class="table">
         <thread>
             <tr>
                 <th>Quantity</th>
@@ -27,13 +27,10 @@
                 </form>
 
                 </td>
-                <td>
-                <form asp-controller="Edit Tables" asp-action="Index">
-                    <p> 
-                     <input type="submit" value="Add to Cart" />
-                        </p>
-                </form>
-                </td>
+
+                <td><button type="button" class="btn btn-primary" onclick="location.href='/InventoryEdit'">Add to Cart</button></td>
+
+
 
             </tr>
 

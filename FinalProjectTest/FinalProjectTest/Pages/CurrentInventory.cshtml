@@ -3,48 +3,69 @@
 @{
     ViewData["Title"] = "Current Inventory";
 }
-
-<div class="text-left">
-    <h1 class="display-3">Inventory</h1>
-
-<form asp-controller="Inventory" asp-action="Index">
-    <p>
-        <input type="text" name="SearchString" />
-        <input type="submit" value="Search" />
-    </p>
-</form>
-
-    <table class="table table-bordered table-striped">
+    <h2>Current Inventory</h2>
+    <table class="table">
         <thread>
             <tr>
-                <th>Item</th>
+                <th>Item
+                    <form asp-controller="Inventory" asp-action="Index">
+                         <input type="text" name="SearchString" />
+                         <input type="submit" value="Search" />
+                    </form>
+                </th>
                 <th>Quantity</th>
-                <th>Actions</th>
+                <th>Category
+                <select name="categories" id="categories">
+                    <option value="All">All</option>
+                    <option value="appliances">Appliances</option>
+                     <option value="office">Office Supplies</option>
+                     <option value="bathroom">Bathroom</option>
+                     <option value="tools">Tools</option>
+                </select>
+                </th>
+                <th>Manufacturer
+                <select name="categories" id="categories">
+                    <option value="All">All</option>
+                    <option value="appliances">Appliances</option>
+                     <option value="office">Office Supplies</option>
+                     <option value="bathroom">Bathroom</option>
+                     <option value="tools">Tools</option>
+                </select>
+                </th>
+                <th>Edit</th>
             </tr>
         </thread>
         <tbody>
             <tr>
                 <td>Tables</td>
                 <td>97</td>
-                <td><a class="nav-link text-dark" asp-area="" asp-page="/InventoryEdit">Edit</a></td>
+                <td>Category</td>
+                <td>Manufacturer</td>
+                <td><button type="button" class="btn btn-primary" onclick="location.href='/InventoryEdit'">Edit</button></td>
 
             </tr>
             <tr>
                 <td>Plates</td>
                 <td>120</td>
-                <td><a class="nav-link text-dark" asp-area="" asp-page="/InventoryEdit">Edit</a></td>
+                <td>Category</td>
+                <td>Manufacturer</td>
+                <td><button type="button" class="btn btn-primary" onclick="location.href='/InventoryEdit'">Edit</button></td>
 
             </tr>
             <tr>
                 <td>Chairs</td>
                 <td>203</td>
-                <td><a class="nav-link text-dark" asp-area="" asp-page="/InventoryEdit">Edit</a></td>
+                <td>Category</td>
+                <td>Manufacturer</td>
+                <td><button type="button" class="btn btn-primary" onclick="location.href='/InventoryEdit'">Edit</button></td>
 
             </tr>
             <tr>
                 <td>Cups</td>
                 <td>156</td>
-                <td><a class="nav-link text-dark" asp-area="" asp-page="/InventoryEdit">Edit</a></td>
+                <td>Category</td>
+                <td>Manufacturer</td>
+                <td><button type="button" class="btn btn-primary" onclick="location.href='/InventoryEdit'">Edit</button></td>
 
             </tr>
 
