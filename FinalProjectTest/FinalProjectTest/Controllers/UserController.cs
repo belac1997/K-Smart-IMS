@@ -11,9 +11,9 @@ namespace FinalProjectTest.Controllers
     [Area("Admin")]
     public class UserController : Controller
     {
-        private UserManager<User> userManager;
+        private UserManager<InventoryUser> userManager;
         private RoleManager<IdentityRole> roleManager;
-        public UserController(UserManager<User> userMngr, 
+        public UserController(UserManager<InventoryUser> userMngr, 
             RoleManager<IdentityRole> roleMngr)
         {
             userManager = userMngr;
@@ -22,8 +22,8 @@ namespace FinalProjectTest.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<User> users = new List<User>();
-            foreach (User user in userManager.Users)
+            List<InventoryUser> users = new List<InventoryUser>();
+            foreach (InventoryUser user in userManager.Users)
             {
                 user.RoleNames = await userManager.GetRolesAsync(user);
                 users.Add(user);
@@ -39,7 +39,7 @@ namespace FinalProjectTest.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(string id)
         {
-            User user = await userManager.FindByIdAsync(id);
+            InventoryUser user = await userManager.FindByIdAsync(id);
             if (user != null)
             {
                 IdentityResult result = await userManager.DeleteAsync(user);
@@ -68,7 +68,7 @@ namespace FinalProjectTest.Controllers
 
             if (ModelState.IsValid)
             {
-                var user = new User { UserName = model.Username };
+                var user = new InventoryUser { UserName = model.Username };
                 var result = await userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -96,7 +96,7 @@ namespace FinalProjectTest.Controllers
             }
             else
             {
-                User user = await userManager.FindByIdAsync(id);
+                InventoryUser user = await userManager.FindByIdAsync(id);
                 await userManager.AddToRoleAsync(user, adminRole.Name);
             }
             return RedirectToAction("Index");
@@ -105,7 +105,7 @@ namespace FinalProjectTest.Controllers
         [HttpPost]
         public async Task<IActionResult> RemoveFromAdmin(string id)
         {
-            User user = await userManager.FindByIdAsync(id);
+            InventoryUser user = await userManager.FindByIdAsync(id);
             var result = await userManager.RemoveFromRoleAsync(user, "Admin");
             if (result.Succeeded) { }
             return RedirectToAction("Index");

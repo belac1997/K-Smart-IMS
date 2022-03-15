@@ -8,11 +8,11 @@ namespace FinalProjectTest.Controllers
 {
     public class AccountController : Controller
     {
-        private UserManager<User> userManager;
-        private SignInManager<User> signInManager;
+        private UserManager<InventoryUser> userManager;
+        private SignInManager<InventoryUser> signInManager;
 
-        public AccountController(UserManager<User> userMngr,
-            SignInManager<User> signInMngr)
+        public AccountController(UserManager<InventoryUser> userMngr,
+            SignInManager<InventoryUser> signInMngr)
         {
             userManager = userMngr;
             signInManager = signInMngr;
@@ -29,7 +29,7 @@ namespace FinalProjectTest.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new FinalProjectTest.Models.User
+                var user = new FinalProjectTest.Models.InventoryUser
                 {
                     UserName = model.Username,
                     Firstname = model.Firstname,

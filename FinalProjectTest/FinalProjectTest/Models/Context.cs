@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace FinalProjectTest.Models
 {
-    public class Context : IdentityDbContext<User>
+    public class Context : IdentityDbContext<InventoryUser>
     {
         public Context(DbContextOptions<Context> options)
             : base(options)
@@ -22,8 +22,8 @@ namespace FinalProjectTest.Models
 
         public static async Task CreateAdminUser(IServiceProvider serviceProvider)
         {
-            UserManager<User> userManager =
-                serviceProvider.GetRequiredService<UserManager<User>>();
+            UserManager<InventoryUser> userManager =
+                serviceProvider.GetRequiredService<UserManager<InventoryUser>>();
             RoleManager<IdentityRole> roleManager =
                 serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
@@ -40,7 +40,7 @@ namespace FinalProjectTest.Models
             // if username doesn't exist, create it and add to role
             if (await userManager.FindByNameAsync(username) == null)
             {
-                User user = new User { UserName = username };
+                InventoryUser user = new InventoryUser { UserName = username };
                 var result = await userManager.CreateAsync(user, password);
                 if (result.Succeeded)
                 {

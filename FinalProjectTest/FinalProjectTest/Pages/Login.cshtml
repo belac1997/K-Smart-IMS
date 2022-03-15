@@ -1,7 +1,9 @@
 ﻿@page
-@model FinalProjectTest.Pages.LoginModel
-@{
-}
+@model FinalProjectTest.Models.LoginViewModel
+@using Microsoft.AspNetCore.Identity
+@using FinalProjectTest.Models
+@using FinalProjectTest.Controllers
+@inject SignInManager<InventoryUser> SignInManager
 <h2>Login</h2>
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -9,30 +11,30 @@
     <div class="form-group row">
         <div class="col-sm-2"><label>Username:</label></div>
         <div class="col-sm-4">
-            <input type="text"
+            <input type="text" asp-for="Username"
                    class="form-control" />
         </div>
         <div class="col">
-            <span
+            <span asp-validation-for="Username"
                   class="text-danger"></span>
         </div>
     </div>
     <div class="form-group row">
         <div class="col-sm-2"><label>Password:</label></div>
         <div class="col-sm-4">
-            <input type="password"
+            <input type="password" asp-for="Password"
                    class="form-control" />
         </div>
         <div class="col">
-            <span
+            <span asp-validation-for="Password"
                   class="text-danger"></span>
         </div>
     </div>
     <div class="form-group row">
         <div class="offset-sm-2 col-sm-4">
-            <input type="checkbox" title="Remember Me"
+            <input type="checkbox" title="Remember Me" asp-for="RememberMe"
                    class="form-check-inline" />
-            <label>Remember Me</label>
+            <label asp-for="RememberMe">Remember Me</label>
         </div>
     </div>
     <div class="row">
@@ -42,7 +44,7 @@
     </div>
     <div class="row">
         <div class="offset-2 col-sm-4">
-            Ask for an admin to reset your password if you have forgotten your login
+            Not registered? Ask a manager to reset your password
         </div>
     </div>
 </form>

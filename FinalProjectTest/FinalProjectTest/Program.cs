@@ -1,6 +1,30 @@
+using FinalProjectTest.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
+
+builder.Services.AddMemoryCache();
+builder.Services.AddSession();
+
+
+
+
+builder.Services.AddIdentity<InventoryUser, IdentityRole>(options => {
+    options.Password.RequiredLength = 6;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireDigit = false;
+}).AddEntityFrameworkStores<Context>()
+  .AddDefaultTokenProviders();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<Context>(options =>
+    options.UseSqlServer(connectionString));
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
@@ -18,6 +42,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
